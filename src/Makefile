@@ -1,5 +1,5 @@
 main: main.c
-	cc -O2 -I ../include -o main main.c
+	cc -O2 main.c ../lib/cpuinfo.c -I ../include -o main
 
 .PHONY: clean
 
