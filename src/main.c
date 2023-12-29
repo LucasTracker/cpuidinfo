@@ -52,5 +52,35 @@ int main(void){
 	printf("	  AVX					  %s\n", cpuinfo.features_cpu.avx ? "Yes" : "No");
 	printf("	  F16C					  %s\n", cpuinfo.features_cpu.f16c ? "Yes" : "No");
 	printf("	  RDRAND				  %s\n", cpuinfo.features_cpu.rdrand ? "Yes" : "No");
+	printf("	  FPU					  %s\n", cpuinfo.features_cpu.fpu ? "Yes" : "No");
+	printf("	  VME					  %s\n", cpuinfo.features_cpu.vme ? "Yes" : "No");
+	printf("	  DE					  %s\n", cpuinfo.features_cpu.de ? "Yes" : "No");
+	printf("	  PSE					  %s\n", cpuinfo.features_cpu.pse ? "Yes" : "No");
+	printf("	  TSC					  %s\n", cpuinfo.features_cpu.tsc ? "Yes" : "No");
+	printf("	  MSR					  %s\n", cpuinfo.features_cpu.msr ? "Yes" : "No");
+	printf("	  PAE					  %s\n", cpuinfo.features_cpu.pae ? "Yes" : "No");
+	printf("	  MCE					  %s\n", cpuinfo.features_cpu.mce ? "Yes" : "No");
+	printf("	  CX8					  %s\n", cpuinfo.features_cpu.cx8 ? "Yes" : "No");
+	printf("	  APIC					  %s\n", cpuinfo.features_cpu.apic ? "Yes" : "No");
+	printf("	  SEP					  %s\n", cpuinfo.features_cpu.sep ? "Yes" : "No");
+	printf("	  MTRR					  %s\n", cpuinfo.features_cpu.mtrr ? "Yes" : "No");
+	printf("	  PGE					  %s\n", cpuinfo.features_cpu.pge ? "Yes" : "No");
+	printf("	  MCA					  %s\n", cpuinfo.features_cpu.mca ? "Yes" : "No");
+	printf("	  CMOV					  %s\n", cpuinfo.features_cpu.cmov ? "Yes" : "No");
+	printf("	  PAT					  %s\n", cpuinfo.features_cpu.pat ? "Yes" : "No");
+	printf("	  PSE-36				  %s\n", cpuinfo.features_cpu.pse_36 ? "Yes" : "No");
+	printf("	  PSN					  %s\n", cpuinfo.features_cpu.psn ? "Yes" : "No");
+	printf("	  CLFSH					  %s\n", cpuinfo.features_cpu.clfsh ? "Yes" : "No");
+	printf("	  DS					  %s\n", cpuinfo.features_cpu.ds ? "Yes" : "No");
+	printf("	  ACPI					  %s\n", cpuinfo.features_cpu.acpi ? "Yes" : "No");
+	printf("	  MMX					  %s\n", cpuinfo.features_cpu.mmx ? "Yes" : "No");
+	printf("	  FXSR					  %s\n", cpuinfo.features_cpu.fxsr ? "Yes" : "No");
+	printf("	  SSE					  %s\n", cpuinfo.features_cpu.sse ? "Yes" : "No");
+	printf("	  SSE2					  %s\n", cpuinfo.features_cpu.sse2 ? "Yes" : "No");
+	printf("	  SS					  %s\n", cpuinfo.features_cpu.ss ? "Yes" : "No");
+	printf("	  HTT					  %s\n", cpuinfo.features_cpu.htt ? "Yes" : "No");
+	printf("	  TM					  %s\n", cpuinfo.features_cpu.tm ? "Yes" : "No");
+	printf("	  PBE					  %s\n", cpuinfo.features_cpu.pbe ? "Yes" : "No");
+
 	return 0;
 }

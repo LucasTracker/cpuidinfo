@@ -33,7 +33,7 @@ void fill_cpuinfo0x1(struct cpuid* cpuinfo, struct reg_struct* registers){
 	if(cpuinfo->version_information.family_id == 0x6 || cpuinfo->version_information.family_id == 0xf)
 		cpuinfo->version_information.model = (cpuinfo->version_information.extended_model_id << 4) + cpuinfo->version_information.model;
 
-	//Features
+	//Features ECX
 	
 	cpuinfo->features_cpu.sse3 = registers->ecx & 0x1;
 	cpuinfo->features_cpu.pclmulqdq = (registers->ecx >> 1) & 0x1;
@@ -66,9 +66,42 @@ void fill_cpuinfo0x1(struct cpuid* cpuinfo, struct reg_struct* registers){
 	cpuinfo->features_cpu.avx = (registers->ecx >> 29) & 0x1;
 	cpuinfo->features_cpu.f16c = (registers->ecx >> 30) & 0x1;
 	cpuinfo->features_cpu.rdrand = (registers->ecx >> 31 )& 0x1;
-	cpuinfo->features_cpu.not_used = 0;
 
+	// Features EDX
 	
+	cpuinfo->features_cpu.fpu = registers->edx & 0x1;
+	cpuinfo->features_cpu.vme = (registers->edx >> 1) & 0x1;
+	cpuinfo->features_cpu.de = (registers->edx >> 2) & 0x1;
+	cpuinfo->features_cpu.pse = (registers->edx >> 3) & 0x1;
+	cpuinfo->features_cpu.tsc = (registers->edx >> 4) & 0x1;
+	cpuinfo->features_cpu.msr = (registers->edx >> 5) & 0x1;
+	cpuinfo->features_cpu.pae = (registers->edx >> 6) & 0x1;
+	cpuinfo->features_cpu.mce = (registers->edx >> 7) & 0x1;
+	cpuinfo->features_cpu.cx8 = (registers->edx >> 8) & 0x1;
+	cpuinfo->features_cpu.apic = (registers->edx >> 9) & 0x1;
+	cpuinfo->features_cpu.reserved_1 = (registers->edx >> 10) & 0x1;
+	cpuinfo->features_cpu.sep = (registers->edx >> 11) & 0x1;
+	cpuinfo->features_cpu.mtrr = (registers->edx >> 12) & 0x1;
+	cpuinfo->features_cpu.pge = (registers->edx >> 13) & 0x1;
+	cpuinfo->features_cpu.mca = (registers->edx >> 14) & 0x1;
+	cpuinfo->features_cpu.cmov = (registers->edx >> 15) & 0x1;
+	cpuinfo->features_cpu.pat = (registers->edx >> 16) & 0x1;
+	cpuinfo->features_cpu.pse_36 = (registers->edx >> 17) & 0x1;
+	cpuinfo->features_cpu.psn = (registers->edx >> 18) & 0x1;
+	cpuinfo->features_cpu.clfsh = (registers->edx >> 19) & 0x1;
+	cpuinfo->features_cpu.reserved_2 = (registers->edx >> 20) & 0x1;
+	cpuinfo->features_cpu.ds = (registers->edx >> 21) & 0x1;
+	cpuinfo->features_cpu.acpi = (registers->edx >> 22) & 0x1;
+	cpuinfo->features_cpu.mmx = (registers->edx >> 23) & 0x1;
+	cpuinfo->features_cpu.fxsr = (registers->edx >> 24) & 0x1;
+	cpuinfo->features_cpu.sse = (registers->edx >> 25) & 0x1;
+	cpuinfo->features_cpu.sse2 = (registers->edx >> 26) & 0x1;
+	cpuinfo->features_cpu.ss = (registers->edx >> 27) & 0x1;
+	cpuinfo->features_cpu.htt = (registers->edx >> 28) & 0x1;
+	cpuinfo->features_cpu.tm = (registers->edx >> 29) & 0x1;
+	cpuinfo->features_cpu.reserved_3 = (registers->edx >> 30) & 0x1;
+	cpuinfo->features_cpu.pbe = (registers->edx >> 31) & 0x1;
+
 }
 void load_struct(struct cpuid* cpuinfo, struct reg_struct* registers){
 	inline_cpuid(0,registers);
