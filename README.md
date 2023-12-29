@@ -5,7 +5,7 @@ The CPUID INFO is software that prints in console information about cpu using CP
 ## How to use?
 
 ```bash
-cd src/ 
+cd cpuidinfo/src/ 
 make 
 ./main
 ```
