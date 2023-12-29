@@ -14,9 +14,50 @@ typedef struct cpuid{
 		unsigned int model 		: 4;
 		unsigned int family_id 		: 4;
 		unsigned int processor_type 	: 2;
+		unsigned int reserved_1		: 2;
 		unsigned int extended_model_id 	: 4;
 	       	unsigned int extended_family_id : 4;
+		unsigned int brand_index	: 4;
+		unsigned int clflush_line_size	: 8;
+		unsigned int max_number_ids	: 8;
+		unsigned int initial_apic_id	: 8;
+		unsigned int reserved_2		: 4;
 	} version_information;
+
+	struct {
+		unsigned int sse3	  : 1;
+		unsigned int pclmulqdq	  : 1;
+		unsigned int dtes64	  : 1;
+		unsigned int monitor	  : 1;
+		unsigned int ds_cpl	  : 1;
+		unsigned int vmx	  : 1;
+		unsigned int smx	  : 1;
+		unsigned int eist	  : 1;
+		unsigned int tm2	  : 1;
+		unsigned int ssse3	  : 1;
+		unsigned int cnxt_id	  : 1;
+		unsigned int sdbg	  : 1;
+		unsigned int fma	  : 1;
+		unsigned int cmpxchg16b   : 1;
+		unsigned int xtpr	  : 1;
+		unsigned int pdcm	  : 1;
+		unsigned int reserved	  : 1;
+		unsigned int pcid	  : 1;
+		unsigned int dca	  : 1;
+		unsigned int sse4_1	  : 1;
+		unsigned int sse4_2	  : 1;
+		unsigned int x2apic	  : 1;
+		unsigned int movbe	  : 1;
+		unsigned int popcnt	  : 1;
+		unsigned int tsc_deadline : 1;
+		unsigned int aesni	  : 1;
+		unsigned int xsave	  : 1;
+		unsigned int osxsave	  : 1;
+		unsigned int avx	  : 1;
+		unsigned int f16c	  : 1;
+		unsigned int rdrand	  : 1;
+		unsigned int not_used	  : 1;
+	} features_cpu;
 
 }cpuid;
 
