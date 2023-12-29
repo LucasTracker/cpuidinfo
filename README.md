@@ -1,6 +1,6 @@
 # CPUID INFO
 
-The CPUID INFO is software that prints in console information about cpu using CPUID instruction.
+The CPUID INFO is a software that prints in console information about cpu using CPUID instruction.
 
 ## How to use?
 
