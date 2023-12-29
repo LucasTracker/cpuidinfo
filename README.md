@@ -9,3 +9,4 @@ cd cpuidinfo/src/
 make 
 ./main
 ```
+## Screenshot
