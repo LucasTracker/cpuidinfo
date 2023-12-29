@@ -11,4 +11,4 @@ make
 ```
 ## Screenshot
 ![example01](https://github.com/LucasTracker/cpuidinfo/blob/main/screenshot/example01.png?raw=true)
-![example02](https://github.com/LucasTracker/cpuidinfo/blob/main/screenshot/example01.pngraw=true)
+![example02](https://github.com/LucasTracker/cpuidinfo/blob/main/screenshot/example02.png?raw=true)
