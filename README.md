@@ -2,7 +2,7 @@
 
 The CPUID INFO is a software that prints in console information about cpu using CPUID instruction.
 
-## How to use?
+## How to use it?
 
 ```bash
 cd cpuidinfo/src/ 
